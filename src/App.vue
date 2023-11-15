@@ -1,10 +1,27 @@
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import PageHeader from './components/PageHeader.vue';
+import PageMain from './components/PageMain.vue';
+import PageFooter from './components/PageFooter.vue';
+
+export default {
+  components: {
+    PageHeader,
+    PageMain,
+    PageFooter
+  },
+
+  data() {
+    return {
+
+    }
+  }
+}
 </script>
 
 <template>
-  <h1>HELLO WORLD</h1>
-  <p>ciao come stari?</p>
+  <PageHeader />
+  <PageMain />
+  <PageFooter />
 </template>
 
 <style lang="scss">
