@@ -30,6 +30,7 @@ a {
     text-decoration: none;
 }
 
+
 .row>[class^='col--'] {
     padding: 20px;
 }
@@ -37,6 +38,18 @@ a {
 .row {
     display: flex;
     flex-wrap: wrap;
+}
+
+.col-4 {
+    flex-basis: calc((100% / 12) * 4);
+}
+
+.col-6 {
+    flex-basis: calc((100% / 12) * 6);
+}
+
+.col-8 {
+    flex-basis: calc((100% / 12) * 8);
 }
 
 .button {
@@ -58,4 +71,37 @@ a {
 .bg-btn {
     background: linear-gradient(90deg, $bg-lgt-black 0%, $bg-black 100%);
     ;
+}
+
+// <!-- inizio sezione 1 -->
+
+
+.debug [class^='col-'] {
+    // min-height: 100px;
+    padding: 10px;
+    // border: 1px dashed black;
+}
+
+.titles {
+    font-size: 45px;
+    font-weight: 500;
+    display: block;
+    line-height: 65px;
+    padding-top: 50px;
+}
+
+.caps-letter {
+    text-transform: capitalize;
+}
+
+.divider {
+    width: 50px;
+    border: 2px solid $bg-green;
+    border-radius: 5px;
+    margin: 40px 0;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 23px;
 }
