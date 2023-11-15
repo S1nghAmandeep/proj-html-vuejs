@@ -1,3 +1,6 @@
+@use './parstials/variables' as*;
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +12,7 @@ html {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1450px;
     margin: 0 auto;
 }
 
@@ -34,4 +37,15 @@ a {
 .row {
     display: flex;
     flex-wrap: wrap;
+}
+
+.button {
+    border: none;
+    padding: 13px 30px;
+    background: linear-gradient(90deg, $bg-lgt-green 0%, $bg-green 100%);
+    display: block;
+    border-radius: 50px;
+    color: $bg-white;
+    text-transform: uppercase;
+    font-size: 10px;
 }
