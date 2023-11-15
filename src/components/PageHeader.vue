@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-    <header class="container">
-        <nav class="row nav-bar">
+    <header>
+        <nav class="row nav-bar container">
             <div>
                 <img class="nav-logo" src="/cropped-Group-39-2x.png" alt="">
             </div>
@@ -35,14 +35,19 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/parstials/variables' as*;
 
+header {
+    background-color: $bg-white;
+}
+
 .nav-bar {
-    padding: 20px 0;
+    padding: 20px 40px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav-logo {
     height: 40px;
+    display: block;
 }
 
 .nav-items {
@@ -50,7 +55,7 @@ export default {
     gap: 30px;
     align-items: center;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .search-icon {
