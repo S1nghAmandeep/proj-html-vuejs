@@ -12,28 +12,32 @@ export default {
 </script>
 
 <template>
-    <section class="hero">
-        <div class="hero_card">
-            <h5>17 years of experience</h5>
-            <h1 class="hero_title">We Are a <br> Web Design <span class="green-text">Agency</span></h1>
-            <p class="hero_text">Far far away, behind the word mountains, far form th ecountries Vokalia and
-                Consonantia, there live
-                the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a large
-                language ocean. Separated they live in Bookmarksgrove.
-            </p>
-            <button class="button bg-btn">Read more</button>
-            <div class="row bottom-text">
-                <ul class="row socials">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
-                <ul class="row slide-num">
-                    <li class="active">01</li>
-                    <li>02</li>
-                    <li>03</li>
-                </ul>
+    <section class="hero ">
+        <div class="container">
+            <div class="row">
+                <div class="hero_card col-6">
+                    <h5>17 years of experience</h5>
+                    <h1 class="hero_title">We Are a <br> Web Design <span class="green-text">Agency</span></h1>
+                    <p class="hero_text">Far far away, behind the word mountains, far form th ecountries Vokalia and
+                        Consonantia, there live
+                        the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a large
+                        language ocean. Separated they live in Bookmarksgrove.
+                    </p>
+                    <button class="button bg-btn">Read more</button>
+                    <div class="row bottom-text">
+                        <ul class="row socials">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                        <ul class="row slide-num">
+                            <li class="active">01</li>
+                            <li>02</li>
+                            <li>03</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -45,17 +49,17 @@ export default {
 .hero {
     background-image: url(../Group-36-2x.png);
     background-color: $bg-light;
-    background-size: contain;
+    background-size: 1000px;
     background-repeat: no-repeat;
     background-position: right;
-    background-position-y: -45px;
-    height: 940px;
+    background-position-y: -43px;
+    padding-bottom: 150px;
     margin-right: -250px;
+    display: flex;
 }
 
 .hero_card {
-    max-width: 720px;
-    padding: 110px 0 0 110px;
+    padding-top: 110px;
 
     .hero_title {
         font-size: 50px;
@@ -64,11 +68,12 @@ export default {
     }
 
     .hero_text {
-        padding: 25px 0;
+        padding: 80px 0 50px;
+        font-size: 18px;
     }
 
     .bottom-text {
-        margin-top: 80px;
+        padding-top: 70px;
         display: flex;
         justify-content: space-between;
         align-items: center;
