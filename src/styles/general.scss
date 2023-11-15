@@ -42,10 +42,20 @@ a {
 .button {
     border: none;
     padding: 13px 30px;
-    background: linear-gradient(90deg, $bg-lgt-green 0%, $bg-green 100%);
+    background: $bg-gradient;
     display: block;
     border-radius: 50px;
     color: $bg-white;
     text-transform: uppercase;
     font-size: 10px;
+    cursor: pointer;
+}
+
+.green-text {
+    color: $bg-green;
+}
+
+.bg-btn {
+    background: linear-gradient(90deg, $bg-lgt-black 0%, $bg-black 100%);
+    ;
 }
