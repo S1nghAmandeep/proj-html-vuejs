@@ -92,7 +92,7 @@ export default {
             <div class="container">
                 <div class="row card-about">
                     <div class="col-6 imgs-about">
-                        <img class="about-img" src="/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+                        <img class="about-img" src="/lisa.jpg" alt="">
                     </div>
                     <div class="col-6">
                         <div class="about-text">
@@ -140,6 +140,28 @@ export default {
                 </div>
             </div>
         </section>
+
+        <!-- inizio sezione 4 -->
+
+        <section>
+            <div class="container">
+                <div class="row justify-center review-card-body">
+                    <div class="col-4 review-card">
+                        <span class="quote green-text">&#8220</span>
+                        <p class="text corsive-text">
+                            When it comes to barbequing, there are two main school of thought of the techniques that you can
+                            use. Freshly scrambled eggs with applewood smoked bacon - are amazing!
+                        </p>
+                        <div>
+                            <img class="reviewer-img" src="/lisa.jpg" alt="">
+                            <h4 class="reviewer-name">Lissa Durbin</h4>
+                            <span>Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 </template>
 
@@ -204,7 +226,7 @@ export default {
 
 // inizio sezione 3
 .section-three {
-    padding: 230px 0;
+    padding: 180px 0;
 
     .projects-text {
         align-self: flex-end;
@@ -213,11 +235,59 @@ export default {
     .project-img-card {
         display: flex;
         flex-wrap: wrap;
-        padding: 100px 0 120px;
+        padding: 100px 0;
     }
 }
 
 .section-three [class^='col-3'] {
     padding: 3px;
+}
+
+.section-three [class^='col-6'] {
+    padding: 0 10px;
+}
+
+// inizio sezione 5
+
+.review-card-body {
+    background-image: linear-gradient(90deg, rgba(28, 25, 25, 0.879), rgba(50, 47, 47, 0.9)),
+        url('meeting.jpg');
+    background-size: cover;
+    background-position: 0;
+    padding: 120px 0;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    color: $bg-white;
+}
+
+.reviewer-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 100px;
+}
+
+.quote {
+    font-size: 150px;
+    line-height: 80px;
+}
+
+.corsive-text {
+    font-style: oblique 40deg;
+    line-height: 30px;
+    font-weight: lighter;
+}
+
+.reviewer-name {
+    text-transform: uppercase;
+    color: $bg-green;
+    padding-top: 20px;
 }
 </style>
