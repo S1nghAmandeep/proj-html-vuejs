@@ -8,8 +8,31 @@ export default {
 
     data() {
         return {
+            options: [
+                {
+                    icon: ['fas', 'gauge-high'],
+                    title: 'Speed Optimization',
+                    text: 'Far far away, behind the word ,ountains, far from the countries Vokalia Separated ...'
+                },
+                {
+                    icon: ['fas', 'cloud'],
+                    title: 'Cloud Sloutions',
+                    text: 'Far far away, behind the word ,ountains, far from the countries Vokalia Separated ...'
+                },
+                {
+                    icon: ['fas', 'tablet-screen-button'],
+                    title: 'Website Design',
+                    text: 'Far far away, behind the word ,ountains, far from the countries Vokalia Separated ...'
+                },
+                {
+                    icon: ['fas', 'stopwatch'],
+                    title: 'Online Marketing',
+                    text: 'Far far away, behind the word ,ountains, far from the countries Vokalia Separated ...'
+                }
 
-        };
+            ]
+        }
+
     }
 }
 </script>
@@ -19,85 +42,30 @@ export default {
         <PageHero />
 
         <!-- inizio sezione 1 -->
-        <section class="debug section-one">
+        <section class="section-one">
             <div class="container">
                 <div class="row">
                     <div class="col-4">
                         <h1 class="titles caps-letter">
                             We are here to <br>make your <span class="green-text">website</span> look more <span
-                                class="green-text">elegant</span> and stylish!
+                                class="green-text">elegant</span> <br>and stylish!
                         </h1>
                         <hr class="divider">
                         <button class="button">View all</button>
                     </div>
                     <div class="col-8 row">
-                        <div class="col-6">
+                        <div class="col-6" v-for="(card, i) in options">
                             <div class="card">
                                 <ul>
                                     <li class="card-icon">
-                                        <font-awesome-icon :icon="['fas', 'gauge-high']" />
+                                        <font-awesome-icon :icon="card.icon" />
                                     </li>
                                     <li>
-                                        <h2 class="card-title">Speed Optimization</h2>
-                                    </li>
-                                    <li>
-                                        <p class="text">
-                                            Far far away, behind the word ,ountains, far from the countries Vokalia
-                                            Separated...
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card">
-                                <ul>
-                                    <li class="card-icon">
-                                        <font-awesome-icon :icon="['fas', 'gauge-high']" />
-                                    </li>
-                                    <li>
-                                        <h2 class="card-title">Speed Optimization</h2>
+                                        <h2 class="card-title">{{ card.title }}</h2>
                                     </li>
                                     <li>
                                         <p class="text">
-                                            Far far away, behind the word ,ountains, far from the countries Vokalia
-                                            Separated...
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card">
-                                <ul>
-                                    <li class="card-icon">
-                                        <font-awesome-icon :icon="['fas', 'gauge-high']" />
-                                    </li>
-                                    <li>
-                                        <h2 class="card-title">Speed Optimization</h2>
-                                    </li>
-                                    <li>
-                                        <p class="text">
-                                            Far far away, behind the word ,ountains, far from the countries Vokalia
-                                            Separated...
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card">
-                                <ul>
-                                    <li class="card-icon">
-                                        <font-awesome-icon :icon="['fas', 'gauge-high']" />
-                                    </li>
-                                    <li>
-                                        <h2 class="card-title">Speed Optimization</h2>
-                                    </li>
-                                    <li>
-                                        <p class="text">
-                                            Far far away, behind the word ,ountains, far from the countries Vokalia
-                                            Separated...
+                                            {{ card.text }}
                                         </p>
                                     </li>
                                 </ul>
@@ -106,6 +74,31 @@ export default {
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- inizio sezione 2 -->
+
+        <section class="section-two">
+            <div class="container">
+                <div class="row card-about">
+                    <div class="col-6 imgs-about">
+                        <img class="about-img" src="/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+                    </div>
+                    <div class="col-6">
+                        <div class="about-text">
+                            <h1 class="titles">learn more about <br> our <span class="green-text">missions</span></h1>
+                            <p class="text">Far far away, behind the word mountains, far form th ecountries Vokalia and
+                                Consonantia, there live
+                                the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a
+                                large
+                                language ocean. Separated they live in Bookmarksgrove.
+                            </p>
+                            <button class="button">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 </template>
@@ -133,7 +126,39 @@ export default {
     padding: 15px 0;
 }
 
-.section-one [class^='col-6'] {
+.section-one [class^='col-'] {
     padding: 15px;
+}
+
+// inizio sezione 2
+
+.section-two {
+    background-color: $bg-light;
+    padding: 200px 0;
+
+
+    .imgs-about {
+
+        background-image: linear-gradient(90deg, rgba(97, 231, 1, 0.73), rgba(150, 225, 95, 0.9)),
+            url('/busy-architect-PYVKWM4-1024x872.jpg');
+        height: 550px;
+        background-size: cover;
+        border-radius: 0 30px 30px 0;
+
+        .about-img {
+            border-radius: 20px;
+            margin: 50px 0 0 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+        }
+    }
+
+
+    .about-text {
+        padding: 50px 20px 0 140px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+    }
 }
 </style>
