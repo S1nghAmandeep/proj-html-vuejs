@@ -30,6 +30,16 @@ export default {
                     text: 'Far far away, behind the word ,ountains, far from the countries Vokalia Separated ...'
                 }
 
+            ],
+            imgs: [
+                '/img1.jpg',
+                '/img2.jpg',
+                '/img3.jpg',
+                '/img4.jpg',
+                '/img5.jpg',
+                '/img6.jpg',
+                '/img7.jpg',
+                '/img8.jpg'
             ]
         }
 
@@ -46,7 +56,7 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <h1 class="titles caps-letter">
+                        <h1 class="titles caps-letter space-top">
                             We are here to <br>make your <span class="green-text">website</span> look more <span
                                 class="green-text">elegant</span> <br>and stylish!
                         </h1>
@@ -86,7 +96,8 @@ export default {
                     </div>
                     <div class="col-6">
                         <div class="about-text">
-                            <h1 class="titles">learn more about <br> our <span class="green-text">missions</span></h1>
+                            <h1 class="titles space-top">learn more about <br> our <span class="green-text">missions</span>
+                            </h1>
                             <p class="text">Far far away, behind the word mountains, far form th ecountries Vokalia and
                                 Consonantia, there live
                                 the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a
@@ -98,7 +109,36 @@ export default {
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- inizio sezione 3 -->
+
+        <section class="section-three">
+            <div class="container">
+                <div class="row justify-center">
+                    <div class="col-6">
+                        <h1 class="titles">Our recent <span class="green-text">web designs</span> & <br>some examples of
+                            <br>past
+                            <span class="green-text">projects</span>
+                        </h1>
+                    </div>
+                    <div class="col-6 projects-text">
+                        <p class="text">Far far away, behind the word mountains, far form th ecountries Vokalia and
+                            Consonantia, there live
+                            the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a
+                            large
+                            language ocean. Separated they live in Bookmarksgrove. Far far away, behind the word mountains.
+                            Separated the live in Bookmarksgrove
+                        </p>
+                    </div>
+                    <div class="col-12 project-img-card">
+                        <div class="col-3" v-for="img in imgs">
+                            <img :src="img" alt="">
+                        </div>
+                    </div>
+                    <button class="button">Read more</button>
+                </div>
+            </div>
         </section>
     </main>
 </template>
@@ -160,5 +200,24 @@ export default {
         gap: 25px;
         align-items: flex-start;
     }
+}
+
+// inizio sezione 3
+.section-three {
+    padding: 230px 0;
+
+    .projects-text {
+        align-self: flex-end;
+    }
+
+    .project-img-card {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 0 120px;
+    }
+}
+
+.section-three [class^='col-3'] {
+    padding: 3px;
 }
 </style>
