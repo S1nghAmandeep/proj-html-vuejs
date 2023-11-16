@@ -40,7 +40,25 @@ export default {
                 '/img6.jpg',
                 '/img7.jpg',
                 '/img8.jpg'
-            ]
+            ],
+
+            news: [
+                {
+                    img: 'blog1.jpg',
+                    date: 'May 24,2018 .by Alex',
+                    title: 'Marketing ideas'
+                },
+                {
+                    img: 'blog2.jpg',
+                    date: 'May 24,2018 .by Alex',
+                    title: 'Rest during working houres'
+                },
+                {
+                    img: 'blog3.jpg',
+                    date: 'May 24,2018 .by Alex',
+                    title: 'Develop your startup idea'
+                }
+            ],
         }
 
     }
@@ -133,7 +151,7 @@ export default {
                     </div>
                     <div class="col-12 project-img-card">
                         <div class="col-3" v-for="img in imgs">
-                            <img :src="img" alt="">
+                            <img class="project-img" :src="img" alt="">
                         </div>
                     </div>
                     <button class="button">Read more</button>
@@ -158,6 +176,26 @@ export default {
                             <span>Client</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- inizio sezione 5 -->
+
+        <section class="section-five">
+            <div class="container">
+                <div class="blog-card-body">
+                    <h1 class="titles caps-letter">Latest news & our <span class="green-text">blog</span></h1>
+                    <div class="row">
+                        <div class="col-4 blog-card" v-for="blog in news">
+                            <img class="blog-card_img" :src="blog.img" alt="">
+                            <div class="blog-card_info">
+                                <p class="blog-card-date">{{ blog.date }}</p>
+                                <h3 class="blog-card-title"><span class="dot">&#x2022;</span>{{ blog.title }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button bg-btn blog-btn">View all post</button>
                 </div>
             </div>
         </section>
@@ -198,7 +236,6 @@ export default {
     background-color: $bg-light;
     padding: 200px 0;
 
-
     .imgs-about {
 
         background-image: linear-gradient(90deg, rgba(97, 231, 1, 0.73), rgba(150, 225, 95, 0.9)),
@@ -213,7 +250,6 @@ export default {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
         }
     }
-
 
     .about-text {
         padding: 50px 20px 0 140px;
@@ -236,6 +272,10 @@ export default {
         display: flex;
         flex-wrap: wrap;
         padding: 100px 0;
+
+        .project-img {
+            border-radius: 3px;
+        }
     }
 }
 
@@ -247,7 +287,7 @@ export default {
     padding: 0 10px;
 }
 
-// inizio sezione 5
+// inizio sezione 4
 
 .review-card-body {
     background-image: linear-gradient(90deg, rgba(28, 25, 25, 0.879), rgba(50, 47, 47, 0.9)),
@@ -255,39 +295,107 @@ export default {
     background-size: cover;
     background-position: 0;
     padding: 120px 0;
+
+    .review-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        color: $bg-white;
+
+        .reviewer-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid black;
+            border-radius: 100px;
+        }
+
+        .quote {
+            font-size: 150px;
+            line-height: 80px;
+        }
+
+        .corsive-text {
+            font-style: oblique 40deg;
+            line-height: 30px;
+            font-weight: lighter;
+        }
+
+        .reviewer-name {
+            text-transform: uppercase;
+            color: $bg-green;
+            padding-top: 20px;
+        }
+
+    }
 }
 
-.review-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// inizio sezione 5
+
+.section-five [class^='col-'] {
+    padding: 10px;
+}
+
+.section-five {
+    padding: 200px 0;
     text-align: center;
-    gap: 30px;
-    color: $bg-white;
-}
+    background-color: $bg-light;
 
-.reviewer-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 2px solid black;
-    border-radius: 100px;
-}
+    .blog-card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
 
-.quote {
-    font-size: 150px;
-    line-height: 80px;
-}
+        .blog-btn {
+            margin-top: 50px;
+        }
+    }
 
-.corsive-text {
-    font-style: oblique 40deg;
-    line-height: 30px;
-    font-weight: lighter;
-}
+    .blog-card {
+        position: relative;
 
-.reviewer-name {
-    text-transform: uppercase;
-    color: $bg-green;
-    padding-top: 20px;
+        .blog-card_img {
+            border-radius: 10px;
+        }
+
+        .blog-card_info {
+            position: absolute;
+            background-color: $bg-white;
+            width: 80%;
+            left: 10%;
+            bottom: -50px;
+            height: 100px;
+            border-radius: 5px;
+            text-align: left;
+            padding: 30px 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+
+
+            .blog-card-date {
+                color: $bg-lgt-grey;
+                font-size: 12px;
+                padding-left: 15px;
+            }
+
+            .blog-card-title {
+                font-weight: 500;
+                text-transform: capitalize;
+
+                .dot {
+                    color: $bg-green;
+                    font-size: 35px;
+                    vertical-align: -5px;
+                    margin-right: 5px;
+                    line-height: 10px;
+                }
+            }
+
+        }
+
+
+    }
 }
 </style>
