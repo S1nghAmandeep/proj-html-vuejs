@@ -17,7 +17,7 @@ export default {
             <div class="row">
                 <div class="hero_card col-6">
                     <h5>17 years of experience</h5>
-                    <h1 class="hero_title">We Are a <br> Web Design <span class="green-text">Agency</span></h1>
+                    <h1 class="hero_title space-top">We Are a <br> Web Design <span class="green-text">Agency</span></h1>
                     <p class="hero_text">Far far away, behind the word mountains, far form th ecountries Vokalia and
                         Consonantia, there live
                         the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a large
