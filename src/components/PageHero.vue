@@ -23,7 +23,7 @@ export default {
                         the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a large
                         language ocean. Separated they live in Bookmarksgrove.
                     </p>
-                    <button class="button bg-btn">Read more</button>
+                    <button class="button bg-black">Read more</button>
                     <div class="row bottom-text">
                         <ul class="row socials">
                             <li class="tag"><a href="#">Facebook</a></li>
