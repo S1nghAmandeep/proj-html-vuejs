@@ -195,11 +195,25 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <button class="button bg-btn blog-btn">View all post</button>
+                    <button class="button bg-black blog-btn">View all post</button>
+                </div>
+                <div class="row form-body">
+                    <div class="col-sei form-card bg-black">
+                        <span class="form-question">Are you ready?</span>
+                        <h1 class="form-title">Start a new project</h1>
+                        <div class="input">
+                            <input class="input-bar" type="email" placeholder="Enter Your Email Address">
+                            <button class="form-btn">Submit</button>
+                        </div>
+                    </div>
+                    <div class="col-sei form-card bg-gredient">
+                        <span class="form-question">Waht are you waiting for?</span>
+                        <h1 class="form-title">Let's talk about work</h1>
+                        <button class="button bg-black">Start now</button>
+                    </div>
                 </div>
             </div>
         </section>
-
     </main>
 </template>
 
@@ -394,8 +408,63 @@ export default {
             }
 
         }
+    }
 
+    .col-sei {
+        flex-basis: calc((100% / 12) * 6 - 20px);
+    }
 
+    .form-body {
+        padding: 150px 0 80px;
+    }
+
+    .form-card {
+        padding: 70px 0 70px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+
+        .form-question {
+            color: #f9f9f9c2;
+            font-size: 17px;
+            text-transform: capitalize;
+        }
+
+        .form-title {
+            color: $bg-white;
+            font-weight: 400;
+            text-transform: capitalize;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .input {
+            position: relative;
+
+            .input-bar {
+                width: 480px;
+                height: 50px;
+                border-radius: 50px;
+                border: none;
+                padding-left: 20px;
+                background-color: $bg-lgt-black;
+            }
+
+            .form-btn {
+                background-color: $bg-lgt-black;
+                height: 30px;
+                border: none;
+                color: $bg-lgt-grey;
+                text-transform: uppercase;
+                position: absolute;
+                right: 25px;
+                bottom: 9px;
+                cursor: pointer;
+            }
+
+        }
     }
 }
 </style>
