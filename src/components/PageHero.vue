@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-    <section class="hero ">
-        <div class="container">
+    <section class="hero">
+        <div class="hero_body container">
             <div class="row">
                 <div class="hero_card col-6">
                     <h5>17 years of experience</h5>
@@ -47,14 +47,17 @@ export default {
 @use '../styles/parstials/variables' as*;
 
 .hero {
-    background-image: url(../Group-36-2x.png);
     background-color: $bg-light;
-    background-size: 1000px;
-    background-repeat: no-repeat;
-    background-position-x: 600px;
-    background-position-y: -25px;
-    padding-bottom: 150px;
-    display: flex;
+
+    .hero_body {
+        background-image: url(../Group-36-2x.png);
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position-x: 600px;
+        background-position-y: -35px;
+        padding-bottom: 150px;
+        display: flex;
+    }
 }
 
 .hero_card {
