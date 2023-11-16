@@ -44,6 +44,10 @@ a {
     flex-basis: calc((100% / 12) * 4);
 }
 
+.col-5 {
+    flex-basis: calc((100% / 12) * 5);
+}
+
 .col-6 {
     flex-basis: calc((100% / 12) * 6);
 }
@@ -77,9 +81,9 @@ a {
 
 
 .debug [class^='col-'] {
-    // min-height: 100px;
+    min-height: 100px;
     padding: 10px;
-    // border: 1px dashed black;
+    border: 1px dashed black;
 }
 
 .titles {
