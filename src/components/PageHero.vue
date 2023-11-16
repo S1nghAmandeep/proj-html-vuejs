@@ -26,10 +26,10 @@ export default {
                     <button class="button bg-btn">Read more</button>
                     <div class="row bottom-text">
                         <ul class="row socials">
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Youtube</a></li>
-                            <li><a href="#">Twitter</a></li>
+                            <li class="tag"><a href="#">Facebook</a></li>
+                            <li class="tag"><a href="#">Instagram</a></li>
+                            <li class="tag"><a href="#">Youtube</a></li>
+                            <li class="tag"><a href="#">Twitter</a></li>
                         </ul>
                         <ul class="row slide-num">
                             <li class="active">01</li>
@@ -51,15 +51,14 @@ export default {
     background-color: $bg-light;
     background-size: 1000px;
     background-repeat: no-repeat;
-    background-position: right;
-    background-position-y: -43px;
+    background-position-x: 600px;
+    background-position-y: -25px;
     padding-bottom: 150px;
-    margin-right: -250px;
     display: flex;
 }
 
 .hero_card {
-    padding-top: 110px;
+    padding: 110px 0 0 110px;
 
     .hero_title {
         font-size: 50px;
@@ -80,9 +79,15 @@ export default {
     }
 
     .socials {
-        gap: 20px;
+        gap: 10px;
         text-transform: uppercase;
         font-weight: 600;
+
+        .tag:not(:last-child)::after {
+            content: '-';
+            display: inline-block;
+            margin-left: 10px
+        }
     }
 
     .slide-num {
