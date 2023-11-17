@@ -83,11 +83,10 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <h1 class="titles caps-letter space-top">
+                        <h1 class="titles caps-letter space-top space-bottom">
                             We are here to <br>make your <span class="green-text">website</span> look more <span
                                 class="green-text">elegant</span> <br>and stylish!
                         </h1>
-                        <hr class="divider">
                         <button class="button">View all</button>
                     </div>
                     <div class="col-8 row">
@@ -144,7 +143,8 @@ export default {
             <div class="container">
                 <div class="row justify-center">
                     <div class="col-6">
-                        <h1 class="titles">Our recent <span class="green-text">web designs</span> & <br>some examples of
+                        <h1 class="titles divider">Our recent <span class="green-text">web designs</span> & <br>some
+                            examples of
                             <br>past
                             <span class="green-text">projects</span>
                         </h1>
@@ -197,9 +197,9 @@ export default {
 
         <section class="section-five">
             <div class="container">
-                <div class="blog-card-body">
-                    <h1 class="titles caps-letter">Latest news & our <span class="green-text">blog</span></h1>
-                    <div class="row">
+                <div class="blog-card-body ">
+                    <h1 class="sect-five-title caps-letter">Latest news & our <span class="green-text">blog</span></h1>
+                    <div class="row space-bottom">
                         <div class="col-4 blog-card" v-for="blog in news">
                             <img class="blog-card_img" :src="blog.img" alt="">
                             <div class="blog-card_info">
@@ -342,6 +342,18 @@ export default {
     }
 }
 
+
+.divider::before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/public/divider.png');
+    margin: 15px 0;
+}
+
 .section-three [class^='col-3'] {
     padding: 3px;
 }
@@ -410,7 +422,26 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+        gap: 10px;
+
+
+        .sect-five-title {
+            font-size: 45px;
+            font-weight: 500;
+            display: block;
+            line-height: 65px;
+
+            &::after {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 50px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url('/public/divider.png');
+                margin: 30px auto 0;
+            }
+        }
 
         .blog-btn {
             margin-top: 50px;
