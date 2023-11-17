@@ -91,8 +91,13 @@ a {
 // utility class
 
 .space-top {
-    padding-top: 50px;
+    margin-top: 50px;
 }
+
+.space-bottom {
+    padding-bottom: 40px;
+}
+
 
 .green-text {
     color: $bg-green;
@@ -152,17 +157,21 @@ a {
     font-weight: 500;
     display: block;
     line-height: 65px;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/public/divider.png');
+        margin: 15px 0;
+    }
 }
 
 .caps-letter {
     text-transform: capitalize;
-}
-
-.divider {
-    width: 50px;
-    border: 2px solid $bg-green;
-    border-radius: 5px;
-    margin: 40px 0;
 }
 
 .text {
@@ -176,5 +185,16 @@ a {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/public/divider.png');
+        margin: 15px 0;
+    }
 }
