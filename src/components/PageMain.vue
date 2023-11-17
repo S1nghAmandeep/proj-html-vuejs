@@ -527,6 +527,7 @@ export default {
                 width: 480px;
                 height: 50px;
                 border-radius: 50px;
+                color: $bg-white;
                 border: none;
                 padding-left: 20px;
                 background-color: $bg-lgt-black;

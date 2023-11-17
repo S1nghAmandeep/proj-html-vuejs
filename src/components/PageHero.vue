@@ -51,12 +51,11 @@ export default {
 
     .hero_body {
         background-image: url(../Group-36-2x.png);
-        background-size: 1050px;
+        background-size: 1160px;
         background-repeat: no-repeat;
-        background-position-x: 600px;
-        background-position-y: -35px;
-        padding-bottom: 150px;
-        display: flex;
+        background-position-x: 560px;
+        background-position-y: -45px;
+        padding-bottom: 230px;
     }
 }
 
