@@ -13,27 +13,27 @@ export default {
             menu: [
                 {
                     text: 'Home',
-                    link: '#'
+                    href: '#'
                 },
                 {
                     text: 'About',
-                    link: '#'
+                    href: '#'
                 },
                 {
                     text: 'Services',
-                    link: '#'
+                    href: '#'
                 },
                 {
                     text: 'Showcase',
-                    link: '#'
+                    href: '#'
                 },
                 {
                     text: 'Blog',
-                    link: '#'
+                    href: '#'
                 },
                 {
                     text: 'Contacts',
-                    link: '#'
+                    href: '#'
                 },
             ]
         };
