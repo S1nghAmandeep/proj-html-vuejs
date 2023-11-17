@@ -315,7 +315,13 @@ export default {
             position: relative;
 
             &:hover .project-info {
-                display: flex
+                display: flex;
+            }
+
+            &:hover.col-3 {
+                transition: 500ms;
+                transform: scale(1.1);
+                z-index: 99;
             }
         }
 
@@ -325,13 +331,13 @@ export default {
 
         .project-info {
             position: absolute;
-            left: 0px;
-            right: 0;
-            top: 0;
-            bottom: 0;
+            left: 3px;
+            right: 3px;
+            top: 3px;
+            bottom: 3px;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 20px;
+            padding: 40px;
             border-radius: 3px;
             color: $bg-white;
             z-index: 99;
@@ -383,13 +389,14 @@ export default {
             width: 100px;
             height: 100px;
             object-fit: cover;
-            border: 2px solid black;
+            border: 2px solid $bg-white;
             border-radius: 100px;
         }
 
         .quote {
             font-size: 150px;
-            line-height: 80px;
+            line-height: 0px;
+            padding-top: 80px;
         }
 
         .corsive-text {
