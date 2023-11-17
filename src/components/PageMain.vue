@@ -275,7 +275,7 @@ export default {
 
     .imgs-about {
 
-        background-image: linear-gradient(90deg, rgba(97, 231, 1, 0.73), rgba(150, 225, 95, 0.9)),
+        background-image: linear-gradient(60deg, rgba(148, 225, 97, 0.9), rgba(9, 218, 163, 0.83)),
             url('/busy-architect-PYVKWM4-1024x872.jpg');
         height: 550px;
         background-size: cover;
