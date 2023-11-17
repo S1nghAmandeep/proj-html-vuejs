@@ -17,7 +17,7 @@ export default {
             <div class="row">
                 <div class="hero_card col-6">
                     <h5>17 years of experience</h5>
-                    <h1 class="hero_title space-top">We Are a <br> Web Design <span class="green-text">Agency</span></h1>
+                    <h1 class="hero_title ">We Are a <br> Web Design <span class="green-text">Agency</span></h1>
                     <p class="hero_text">Far far away, behind the word mountains, far form th ecountries Vokalia and
                         Consonantia, there live
                         the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a large
@@ -51,7 +51,7 @@ export default {
 
     .hero_body {
         background-image: url(../Group-36-2x.png);
-        background-size: 75%;
+        background-size: 1050px;
         background-repeat: no-repeat;
         background-position-x: 600px;
         background-position-y: -35px;
@@ -67,10 +67,21 @@ export default {
         font-size: 50px;
         font-weight: 600;
         line-height: 60px;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('/public/divider.png');
+            margin: 35px 0;
+        }
     }
 
     .hero_text {
-        padding: 80px 0 50px;
+        padding: 15px 0 50px;
         font-size: 18px;
     }
 
