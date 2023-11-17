@@ -59,6 +59,15 @@ export default {
                     title: 'Develop your startup idea'
                 }
             ],
+
+            logo: [
+                '/client-1-2x.png',
+                '/client-9-2x.png',
+                '/client-7-2x.png',
+                '/client-3-2x.png',
+                '/client-4-2x.png',
+                '/client-5-2x.png'
+            ]
         }
 
     }
@@ -212,6 +221,11 @@ export default {
                         <button class="button bg-black">Start now</button>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-2 client-logo" v-for="img in logo">
+                        <img :src="img" alt="">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -353,7 +367,7 @@ export default {
 }
 
 .section-five {
-    padding: 200px 0;
+    padding: 200px 0 0 0;
     text-align: center;
     background-color: $bg-light;
 
@@ -466,5 +480,13 @@ export default {
 
         }
     }
+
+    .client-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 70px;
+    }
+
 }
 </style>
