@@ -41,6 +41,10 @@ a {
     flex-wrap: wrap;
 }
 
+.col-2 {
+    flex-basis: calc((100% / 12) * 2);
+}
+
 .col-3 {
     flex-basis: calc((100% / 12) * 3);
 }
