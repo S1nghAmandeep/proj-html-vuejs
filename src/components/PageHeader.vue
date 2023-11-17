@@ -15,7 +15,7 @@ export default {
     <header>
         <nav class="row nav-bar container">
             <div>
-                <img class="nav-logo" src="/cropped-Group-39-2x.png" alt="">
+                <img class="page-logo" src="/cropped-Group-39-2x.png" alt="">
             </div>
             <div>
                 <ul class="row nav-items">
@@ -43,11 +43,6 @@ header {
     padding: 20px 40px;
     align-items: center;
     justify-content: space-between;
-}
-
-.nav-logo {
-    height: 40px;
-    display: block;
 }
 
 .nav-items {
