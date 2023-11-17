@@ -1,5 +1,4 @@
 <script>
-
 export default {
     props: {
         menu: {
@@ -9,7 +8,7 @@ export default {
 
         title: {
             type: String,
-            required: true
+            // required: true
         }
     },
 
