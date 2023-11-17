@@ -1,11 +1,41 @@
 <script>
 
+import MenuLinks from './MenuLinks.vue';
+
 export default {
 
+    components: {
+        MenuLinks,
+    },
 
     data() {
         return {
-            navBar: ['Home', 'About', 'Services', 'Showcase', 'Blog', 'Contact']
+            menu: [
+                {
+                    text: 'Home',
+                    link: '#'
+                },
+                {
+                    text: 'About',
+                    link: '#'
+                },
+                {
+                    text: 'Services',
+                    link: '#'
+                },
+                {
+                    text: 'Showcase',
+                    link: '#'
+                },
+                {
+                    text: 'Blog',
+                    link: '#'
+                },
+                {
+                    text: 'Contacts',
+                    link: '#'
+                },
+            ]
         };
     }
 }
@@ -18,9 +48,7 @@ export default {
                 <img class="page-logo" src="/cropped-Group-39-2x.png" alt="">
             </div>
             <div>
-                <ul class="row nav-items">
-                    <li v-for="item in navBar"><a href="#">{{ item }}</a></li>
-                </ul>
+                <MenuLinks class="row nav-items" :menu="menu" />
             </div>
             <div>
                 <ul class="row nav-items">
