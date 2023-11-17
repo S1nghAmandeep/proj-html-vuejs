@@ -1,10 +1,10 @@
 <script>
 
-import MenuFooter from './MenuFooter.vue';
+import MenuLinks from './MenuLinks.vue';
 
 export default {
     components: {
-        MenuFooter,
+        MenuLinks,
     },
 
     data() {
@@ -53,7 +53,7 @@ export default {
                         upper surface of
                         the impenetrable foliage of my trees. While the lovely valley teems with vapour aroung me.</p>
                 </div>
-                <MenuFooter class="col-3 link-card" :title="footerMenu1.title" :menu="menu1" />
+                <MenuLinks class="col-3 link-card" :title="footerMenu1.title" :menu="menu1" />
                 <div class="col-3 ">
                     <h4 class="menu-title">Contacts</h4>
                     <ul class="footer-card">
