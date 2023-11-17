@@ -108,6 +108,15 @@ a {
     justify-content: center;
 }
 
+.space-items {
+    justify-content: space-between;
+}
+
+.page-logo {
+    height: 40px;
+    display: block;
+}
+
 // <!-- inizio sezione 1 -->
 
 
@@ -138,4 +147,13 @@ a {
 .text {
     font-size: 18px;
     line-height: 23px;
+}
+
+// inizio footer
+
+.menu-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
