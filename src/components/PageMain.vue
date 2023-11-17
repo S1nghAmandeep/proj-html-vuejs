@@ -158,9 +158,13 @@ export default {
                             Separated the live in Bookmarksgrove
                         </p>
                     </div>
-                    <div class="col-12 project-img-card">
-                        <div class="col-3" v-for="img in imgs">
+                    <div class="col-12 project-img-card-body">
+                        <div class="col-3 project-img-card" v-for="img in imgs">
                             <img class="project-img" :src="img" alt="">
+                            <div class="project-info">
+                                <h2>Here goes the text</h2>
+                                <p>Here goes the sector</p>
+                            </div>
                         </div>
                     </div>
                     <button class="button">Read more</button>
@@ -215,7 +219,7 @@ export default {
                             <button class="form-btn">Submit</button>
                         </div>
                     </div>
-                    <div class="col-sei form-card bg-gredient">
+                    <div class="col-sei form-card bg-gredient green-shadow">
                         <span class="form-question">Waht are you waiting for?</span>
                         <h1 class="form-title">Let's talk about work</h1>
                         <button class="button bg-black">Start now</button>
@@ -242,6 +246,11 @@ export default {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
     padding: 40px 30px 50px;
+
+    &:hover {
+        background: linear-gradient(90deg, #0BDAA1 0%, #5EDE7B 50%, #95E161 100%);
+        color: $bg-white;
+    }
 }
 
 .card-icon {
@@ -296,13 +305,39 @@ export default {
         align-self: flex-end;
     }
 
-    .project-img-card {
+    .project-img-card-body {
         display: flex;
         flex-wrap: wrap;
         padding: 100px 0;
+        position: relative;
+
+        .project-img-card {
+            position: relative;
+
+            &:hover .project-info {
+                display: flex
+            }
+        }
 
         .project-img {
             border-radius: 3px;
+        }
+
+        .project-info {
+            position: absolute;
+            left: 0px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            border-radius: 3px;
+            color: $bg-white;
+            z-index: 99;
+            background: $bg-gradient;
+            opacity: 0.9;
+            display: none;
         }
     }
 }
