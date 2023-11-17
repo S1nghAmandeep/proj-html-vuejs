@@ -1,10 +1,10 @@
 <script>
 
-import MenuLinks from './MenuLinks.vue';
+import MenuFooter from './MenuFooter.vue';
 
 export default {
     components: {
-        MenuLinks,
+        MenuFooter,
     },
 
     data() {
@@ -53,7 +53,7 @@ export default {
                         upper surface of
                         the impenetrable foliage of my trees. While the lovely valley teems with vapour aroung me.</p>
                 </div>
-                <MenuLinks class="col-3 link-card" :title="footerMenu1.title" :menu="menu1" />
+                <MenuFooter class="col-3 link-card" :title="footerMenu1.title" :menu="menu1" />
                 <div class="col-3 ">
                     <h4 class="menu-title">Contacts</h4>
                     <ul class="footer-card">
@@ -79,7 +79,7 @@ export default {
 }
 
 .footer {
-    padding: 150px 10px 130px;
+    padding: 100px 10px 100px;
     background-color: $bg-white;
 
     .footer-card {

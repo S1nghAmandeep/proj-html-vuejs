@@ -1,11 +1,11 @@
 <script>
 
-import MenuLinks from './MenuLinks.vue';
+import MenuHeader from './MenuHeader.vue';
 
 export default {
 
     components: {
-        MenuLinks,
+        MenuHeader,
     },
 
     data() {
@@ -48,7 +48,7 @@ export default {
                 <img class="page-logo" src="/cropped-Group-39-2x.png" alt="">
             </div>
             <div>
-                <MenuLinks class="row nav-items" :menu="menu" />
+                <MenuHeader class="row nav-items" :menu="menu" />
             </div>
             <div>
                 <ul class="row nav-items">
