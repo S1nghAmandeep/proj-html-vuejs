@@ -51,21 +51,22 @@ export default {
 
     .hero_body {
         background-image: url(../Group-36-2x.png);
-        background-size: 1160px;
+        background-size: 1175px;
         background-repeat: no-repeat;
         background-position-x: 560px;
-        background-position-y: -45px;
-        padding-bottom: 230px;
+        background-position-y: -40px;
+        padding: 150px 0 200px;
     }
 }
 
 .hero_card {
-    padding: 110px 0 0 110px;
+    padding-left: 110px;
 
     .hero_title {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 600;
         line-height: 60px;
+        padding-top: 10px;
 
         &::after {
             content: '';
@@ -112,6 +113,8 @@ export default {
         align-items: center;
         gap: 30px;
         border-radius: 50px;
+        box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.30);
+
 
         .active {
             background: $bg-gradient;
