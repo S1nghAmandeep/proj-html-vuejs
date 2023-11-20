@@ -5,15 +5,53 @@ export default {
 
     data() {
         return {
-
+            slider: ['01', '02', '03'],
+            slide: 0,
+            autoPlay: null,
         };
+    },
+    methods: {
+        onClick(i) {
+            this.slide = i
+            console.log(this.slide, i)
+        },
+
+        startSlide() {
+            if (this.slide === 2) {
+                this.slide = 0
+            } else {
+                this.slide++
+            }
+        },
+
+        scroll() {
+            this.autoPlay = setInterval(this.startSlide, 4000)
+        },
+
+        stopSlide() {
+            clearInterval(this.autoPlay)
+            this.autoPlay = null
+        },
+
+        bgImg() {
+            if (this.slide === 0) {
+                return 'bg-img-one'
+            } else if (this.slide === 1) {
+                return 'bg-img-two'
+            } else {
+                return 'bg-img-three'
+            }
+        }
+    },
+    mounted() {
+        // this.scroll()
     }
 }
 </script>
 
 <template>
     <section class="hero">
-        <div class="hero_body container">
+        <div class="hero_body container" :class="bgImg()">
             <div class="row">
                 <div class="hero_card col-6">
                     <h5>17 years of experience</h5>
@@ -31,10 +69,11 @@ export default {
                             <li class="tag"><a href="#">Youtube</a></li>
                             <li class="tag"><a href="#">Twitter</a></li>
                         </ul>
-                        <ul class="row slide-num">
-                            <li class="active">01</li>
-                            <li>02</li>
-                            <li>03</li>
+                        <ul class="row slide-num" @mouseenter="stopSlide()" @mouseleave="scroll()">
+                            <li @click="onClick(i)" v-for="(num, i) in slider" :class="slide === i ? 'active' : ''"
+                                class="scroll-num">
+                                {{ num }}
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -50,12 +89,23 @@ export default {
     background-color: $bg-light;
 
     .hero_body {
-        background-image: url(../Group-36-2x.png);
         background-size: 1175px;
         background-repeat: no-repeat;
         background-position-x: 560px;
         background-position-y: -40px;
         padding: 150px 0 200px;
+    }
+
+    .bg-img-one {
+        background-image: url(../Group-36-2x.png);
+    }
+
+    .bg-img-two {
+        background-image: url(../Group-35-2x.png);
+    }
+
+    .bg-img-three {
+        background-image: url(../Group-40-2x.png);
     }
 }
 
@@ -105,21 +155,24 @@ export default {
     }
 
     .slide-num {
-        background: linear-gradient(90deg, #848484 0%, #2F2F2F 100%);
-        padding: 0px 10px;
+        background: linear-gradient(90deg, #5f5f5f 0%, #2F2F2F 100%);
         font-size: 18px;
         color: $bg-grey;
         display: flex;
         align-items: center;
-        gap: 30px;
+        cursor: pointer;
         border-radius: 50px;
         box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.30);
 
+        &>li {
+            width: 50px;
+            text-align: center;
+        }
 
         .active {
             background: $bg-gradient;
             padding: 6px 18px;
-            margin: 5px 0 5px -3px;
+            margin: 5px;
             border-radius: 50px;
         }
     }
