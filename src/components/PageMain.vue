@@ -70,7 +70,18 @@ export default {
             ]
         }
 
-    }
+    },
+    methods: {
+        goToSection(value) {
+            const top = this.$refs[(value)].offsetTop;
+            window.scrollTo({
+                top: top,
+                left: 0,
+                behavior: 'smooth'
+            })
+            console.log(value);
+        }
+    },
 }
 </script>
 
@@ -79,7 +90,7 @@ export default {
         <PageHero />
 
         <!-- inizio sezione 1 -->
-        <section class="section-one">
+        <section @go-section="goToSection" ref="services" class="section-one">
             <div class="container">
                 <div class="row">
                     <div class="col-4">

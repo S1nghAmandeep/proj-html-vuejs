@@ -44,7 +44,7 @@ export default {
         }
     },
     mounted() {
-        // this.scroll()
+        this.scroll()
     }
 }
 </script>

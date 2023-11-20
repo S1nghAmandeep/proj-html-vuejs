@@ -12,27 +12,27 @@ export default {
         return {
             menu: [
                 {
-                    text: 'Home',
+                    text: 'home',
                     href: '#'
                 },
                 {
-                    text: 'About',
+                    text: 'about',
                     href: '#'
                 },
                 {
-                    text: 'Services',
+                    text: 'services',
                     href: '#'
                 },
                 {
-                    text: 'Showcase',
+                    text: 'showcase',
                     href: '#'
                 },
                 {
-                    text: 'Blog',
+                    text: 'blog',
                     href: '#'
                 },
                 {
-                    text: 'Contacts',
+                    text: 'contacts',
                     href: '#'
                 },
             ]
