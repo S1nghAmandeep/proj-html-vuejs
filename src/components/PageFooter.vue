@@ -44,7 +44,7 @@ export default {
 </script>
 
 <template>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="row space-items">
                 <div class="col-3 footer-card">

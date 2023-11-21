@@ -1,6 +1,8 @@
 <script>
 
 import PageHero from './PageHero.vue';
+import { store } from '../store';
+
 export default {
     components: {
         PageHero,
@@ -8,6 +10,7 @@ export default {
 
     data() {
         return {
+            store,
             options: [
                 {
                     icon: ['fas', 'gauge-high'],
@@ -72,15 +75,16 @@ export default {
 
     },
     methods: {
-        goToSection(value) {
-            const top = this.$refs[(value)].offsetTop;
-            window.scrollTo({
-                top: top,
-                left: 0,
-                behavior: 'smooth'
-            })
-            console.log(value);
-        }
+        // goToSection(value) {
+        //     const top = this.$refs[(value)].offsetTop;
+        //     window.scrollTo({
+        //         top: top,
+        //         left: 0,
+        //         behavior: 'smooth'
+        //     })
+        //     console.log(value);
+
+        // }
     },
 }
 </script>
@@ -88,9 +92,8 @@ export default {
 <template>
     <main>
         <PageHero />
-
         <!-- inizio sezione 1 -->
-        <section @go-section="goToSection" ref="services" class="section-one">
+        <section id="services" class="section-one">
             <div class="container">
                 <div class="row">
                     <div class="col-4">
@@ -125,7 +128,7 @@ export default {
 
         <!-- inizio sezione 2 -->
 
-        <section class="section-two">
+        <section class="section-two" id="about">
             <div class="container">
                 <div class="row card-about">
                     <div class="col-6 imgs-about">
@@ -160,7 +163,7 @@ export default {
                             <span class="green-text">projects</span>
                         </h1>
                     </div>
-                    <div class="col-6 projects-text">
+                    <div class="col-6 projects-text" id="showcase">
                         <p class="text">Far far away, behind the word mountains, far form th ecountries Vokalia and
                             Consonantia, there live
                             the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a
@@ -206,7 +209,7 @@ export default {
 
         <!-- inizio sezione 5 -->
 
-        <section class="section-five">
+        <section class="section-five" id="blog">
             <div class="container">
                 <div class="blog-card-body ">
                     <h1 class="sect-five-title caps-letter">Latest news & our <span class="green-text">blog</span></h1>

@@ -1,6 +1,7 @@
 <script>
 
 import MenuHeader from './MenuHeader.vue';
+import { store } from '../store';
 
 export default {
 
@@ -10,6 +11,7 @@ export default {
 
     data() {
         return {
+            store,
             menu: [
                 {
                     text: 'home',
@@ -37,18 +39,31 @@ export default {
                 },
             ]
         };
-    }
+    },
+    methods: {
+        goToSection(value) {
+            /*
+            const top = this.$refs[(value)].offsetTop;
+            window.scrollTo({
+                top: top,
+                left: 0,
+                behavior: 'smooth'
+            })
+            */
+            // console.log('goToSection', value);
+        }
+    },
 }
 </script>
 
 <template>
-    <header>
+    <header id="home">
         <nav class="row nav-bar container">
             <div>
                 <img class="page-logo" src="/cropped-Group-39-2x.png" alt="">
             </div>
             <div>
-                <MenuHeader class="row nav-items" :menu="menu" />
+                <MenuHeader @goSection="goToSection" class="row nav-items" :menu="menu" />
             </div>
             <div>
                 <ul class="row nav-items">
