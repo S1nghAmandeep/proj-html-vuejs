@@ -11,6 +11,7 @@ export default {
     data() {
         return {
             store,
+            active: true,
             options: [
                 {
                     icon: ['fas', 'gauge-high'],
@@ -75,25 +76,24 @@ export default {
 
     },
     methods: {
-        // goToSection(value) {
-        //     const top = this.$refs[(value)].offsetTop;
-        //     window.scrollTo({
-        //         top: top,
-        //         left: 0,
-        //         behavior: 'smooth'
-        //     })
-        //     console.log(value);
-
-        // }
+        topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTo({
+                top: top,
+                left: 0,
+                behavior: 'smooth'
+            })
+        },
     },
 }
 </script>
 
 <template>
     <main>
-        <PageHero />
+        <PageHero @mouseenter="active = false" />
+        <div class="go-home" @click="topFunction()" v-if="active">&uparrow;</div>
         <!-- inizio sezione 1 -->
-        <section id="services" class="section-one">
+        <section id="services" class="section-one" @mouseenter="active = true">
             <div class="container">
                 <div class="row">
                     <div class="col-4">
