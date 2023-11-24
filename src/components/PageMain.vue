@@ -11,7 +11,7 @@ export default {
     data() {
         return {
             store,
-            active: true,
+            active: false,
             options: [
                 {
                     icon: ['fas', 'gauge-high'],
@@ -79,21 +79,37 @@ export default {
         topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTo({
-                top: top,
+                top: 0,
                 left: 0,
                 behavior: 'smooth'
             })
         },
+
+        scrollFunction() {
+            console.log('scroll');
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                this.active = true;
+                console.log('true');
+            } else {
+                this.active = false;
+                console.log('false');
+            }
+        }
     },
+    mounted() {
+        // this.scrollFunction()
+        // window.onscroll = this.scrollFunction();
+        // window.scroll = this.scrollFunction();
+    }
 }
 </script>
 
 <template>
-    <main>
-        <PageHero @mouseenter="active = false" />
+    <main @scroll="scrollFunction()" @mousemove="scrollFunction()">
+        <PageHero />
         <div class="go-home" @click="topFunction()" v-if="active">&uparrow;</div>
         <!-- inizio sezione 1 -->
-        <section id="services" class="section-one" @mouseenter="active = true">
+        <section id="services" class="section-one">
             <div class="container">
                 <div class="row">
                     <div class="col-4">
@@ -314,6 +330,7 @@ export default {
 // inizio sezione 3
 .section-three {
     padding: 180px 0;
+    overflow: hidden;
 
     .projects-text {
         align-self: flex-end;
