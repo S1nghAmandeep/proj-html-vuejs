@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-.go-home {
+#goHome {
     color: $bg-green;
     position: fixed;
     width: 50px;
@@ -22,7 +22,13 @@
     bottom: 20px;
     right: 20px;
     cursor: pointer;
+    margin-bottom: -12rem;
     z-index: 8888;
+    transition: margin-bottom 0.2s;
+
+    &.active {
+        margin-bottom: 0;
+    }
 }
 
 .hide {
