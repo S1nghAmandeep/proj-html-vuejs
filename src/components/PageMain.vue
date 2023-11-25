@@ -11,7 +11,6 @@ export default {
     data() {
         return {
             store,
-            active: false,
             options: [
                 {
                     icon: ['fas', 'gauge-high'],
@@ -84,30 +83,26 @@ export default {
                 behavior: 'smooth'
             })
         },
-
-        scrollFunction() {
-            console.log('scroll');
-            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-                this.active = true;
-                console.log('true');
-            } else {
-                this.active = false;
-                console.log('false');
-            }
-        }
     },
     mounted() {
-        // this.scrollFunction()
-        // window.onscroll = this.scrollFunction();
-        // window.scroll = this.scrollFunction();
+        const btn = document.getElementById('goHome')
+        document.addEventListener("scroll", () => {
+            if (document.documentElement.scrollTop > 500) {
+                window.requestAnimationFrame(() => {
+                    btn.classList.add('active')
+                });
+            }
+            document.getElementById('goHome').classList.remove('active')
+
+        });
     }
 }
 </script>
 
 <template>
-    <main @scroll="scrollFunction()" @mousemove="scrollFunction()">
+    <main>
         <PageHero />
-        <div class="go-home" @click="topFunction()" v-if="active">&uparrow;</div>
+        <div id="goHome" @click="topFunction()">&uparrow;</div>
         <!-- inizio sezione 1 -->
         <section id="services" class="section-one">
             <div class="container">
